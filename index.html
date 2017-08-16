@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Ryuran.info ::: Yvain LIECHTI</title>
+		<link rel="stylesheet" type="text/css" media="all" href="css/style.css" />
+	</head>
+	<body class="Layout">
+		<div class="wrapper">
+			<header>
+				<hgroup>
+					<h1>Ryuran<span>.info</span></h1>
+				</hgroup>
+			</header>
+			<section>
+				<a class="twitter" href="https://twitter.com/ryuran78">
+					<p><strong><span>@</span>ryuran78</strong> suivez moi sur twitter</p>
+				</a>
+			</section>
+			<footer>
+				<p>&copy;<a href="http://cv.ryuran.info" title="CV">Yvain LIECHTI</a></p>
+			</footer>
+			<script src="js/jquery.js" type="text/javascript"></script>
+			<script src="js/html5-ie.js" type="text/javascript"></script>
+			<script src="js/raphael.js" type="text/javascript"></script>
+			<script src="svg/cat.js" type="text/javascript"></script>
+			<script src="svg/twitterBird.js" type="text/javascript"></script>
+			<script type="text/javascript">
+				$(function(){
+					Raphael($('header hgroup').get(0),270,230,svgCat);
+					Raphael($('a.twitter').get(0),100,100,svgTwitterBird);
+				});
+			</script>
+		</div>
+	</body>
+</html>
