@@ -9,30 +9,25 @@
     font-style: normal;
 }
 
-header, footer, section, aside, nav, article, figure{ display:block; }
-
 a {
     -webkit-transition: all 0.3s ease-in;
     -moz-transition: all 0.3s ease-in;
     -o-transition: all 0.3s ease-in;
     transition: all 0.3s ease-in;
 }
+
 a, a:link, a:visited, a:active{color:#222;}
 a:hover, a:focus{color:#f60;}
 img{border:0;}
 
+html{
+    font-size: 62.5%;
+}
 body{
-    font-size:62.5%;
-    font: 62.5% Lucida grande, Tahoma, Verdana, Arial, Sans-serif;
-    margin:0;
+    font-family: Lucida grande, Tahoma, Verdana, Arial, Sans-serif;
+    margin: 0;
 	
-    background: -moz-linear-gradient(top, rgba(0,0,0,0.1) 0%, rgba(0,0,0,0.3) 15%, rgba(0,0,0,0) 100%); /* FF3.6+ */
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.1)), color-stop(15%,rgba(0,0,0,0.3)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
-    background: -webkit-linear-gradient(top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.3) 15%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
-    background: -o-linear-gradient(top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.3) 15%,rgba(0,0,0,0) 100%); /* Opera11.10+ */
-    background: -ms-linear-gradient(top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.3) 15%,rgba(0,0,0,0) 100%); /* IE10+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1a000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
-    background: linear-gradient(top, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.3) 15%,rgba(0,0,0,0) 100%); /* W3C */
+    background: linear-gradient(to bottom, rgba(0,0,0,0.1) 0%,rgba(0,0,0,0.2) 15%,rgba(0,0,0,0) 100%); /* W3C */
     background-color: #eee;
     
     background-repeat:no-repeat;
@@ -58,7 +53,7 @@ header h1{
     text-transform:uppercase;
     padding:0 0 0 0;
     margin:0;
-    line-height:50px;
+    line-height:5rem;
     color:#000;
 }
 header h1 span{
@@ -67,26 +62,41 @@ header h1 span{
 }
 footer{
     margin: 0;
-    padding:0 30px;
+    padding:0 3rem;
 }
-.twitter{
+.social{
 	display:block;
 	text-align:left;
 	text-decoration:none;
-	overflow:auto;
-	padding: 10px 0;
-	margin:10px;
+	padding: 1rem 1rem;
+	margin: 1rem;
     background-color:#fff;
-	font-size:15px;
+	font-size:1.6rem;
     
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
+    border-radius: 2rem;
     
     -webkit-box-shadow: inset 0px 0px 5px 0px #444444;
     -moz-box-shadow: inset 0px 0px 5px 0px #444444;
     box-shadow: inset 0px 0px 5px 0px #444444; 
 }
-.twitter svg{float: left; margin-top: -15px;}
-.twitter p{margin:0; padding:20px 10px 10px 0;}
-.twitter strong{display:block; font-size:20px;}
+.social svg{display: inline-block; vertical-align: middle; width: 4rem; height: 4rem; margin: 1rem}
+.social p{display: inline-block; vertical-align: middle; padding: .5rem; margin: 0;}
+.social strong{display:block; font-size:2rem;}
+
+@keyframes tailMove {
+    0% {transform: rotate(0deg);}
+    25% {transform: rotate(10deg);}
+    100% {transform: rotate(0deg);}
+}
+
+#cat-tail {
+    transform: rotate(0deg);
+    transform-origin: 100px 200px;
+}
+#cat-tail:hover {
+    animation: .5s linear 0s tailMove;
+    animation-iteration-count: infinite;
+}
+#cat-head {
+    transform-origin: 145px 63px;
+}
